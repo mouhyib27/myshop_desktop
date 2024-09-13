@@ -31,19 +31,19 @@ class _SidebarWidgetState extends State<SidebarWidget> {
 
     return Container(
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(6.0),
-          color: isSelected ? selectionColor : Colors.transparent),
-      child: InkWell(
+          borderRadius: BorderRadius.circular(10.0),
+          color: isSelected ? Colors.grey.shade200 : Colors.transparent),
+      child: GestureDetector(
         onTap: () => setState(() {
           selectedIndex = index;
         }),
         child: Row(
           children: [
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 13, vertical: 7),
+              padding: const EdgeInsets.symmetric(horizontal: 13, vertical: 10),
               child: Icon(
                 data.menu[index].icon,
-                color: isSelected ? Colors.black : Colors.grey,
+                color: primaryColor,
               ),
             ),
             Text(
@@ -51,7 +51,8 @@ class _SidebarWidgetState extends State<SidebarWidget> {
               style: TextStyle(
                   fontSize: 16,
                   color: isSelected ? Colors.black : Colors.grey,
-                  fontWeight: isSelected ? FontWeight.w600 : FontWeight.normal),
+                  // fontWeight: isSelected ? FontWeight.w600 : FontWeight.normal
+              ),
             )
           ],
         ),

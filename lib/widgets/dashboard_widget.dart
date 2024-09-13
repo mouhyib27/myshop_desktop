@@ -11,12 +11,16 @@ class DashboardWidget extends StatefulWidget {
 class _DashboardWidgetState extends State<DashboardWidget> {
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        const Expanded(flex: 2, child: SidebarWidget()),
-        Expanded(flex: 8, child: Container(color: Colors.red)),
-        Expanded(flex: 2, child: Container(color: Colors.yellow)),
-      ],
+    return Scaffold(
+      body: SafeArea(
+        child: Row(
+          children: [
+            const Expanded(flex: 2, child: SidebarWidget()),
+            Expanded(flex: 8, child: Container(color: Colors.red)),
+            Expanded(flex: 2, child: Container(color: Colors.yellow)),
+          ],
+        ),
+      ),
     );
   }
 }
