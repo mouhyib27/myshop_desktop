@@ -1,4 +1,4 @@
-import 'package:dashboard/model/sidebar_model.dart';
+import 'package:dashboard/business/model/sidebar_model.dart';
 import 'package:fluentui_system_icons/fluentui_system_icons.dart';
 
 
